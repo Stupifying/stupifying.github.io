@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family of Buttons · Rico Manalastas</title>
+  <meta name="description" content="Group Project 1: a reflex game with one animal button per teammate. Rico built the game loop, click feedback, and the dog's fur-sneeze mechanic.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/term.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="whoami" href="index.html"><span class="sym" aria-hidden="true">✻</span>rico@cpsc581<span class="path">:~/a1$</span></a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">~/home</a></li>
+          <li><a href="a1.html" aria-current="page">a1/</a></li>
+          <li><a href="a2.html">a2/</a></li>
+          <li><a href="philosophy.html">philosophy.md</a></li>
+          <li><a href="credits.html">credits.md</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <p class="kicker">Group Project 1 · Sep 21–28, 2026 · team of 3</p>
+      <h1>Family of Buttons</h1>
+      <p class="lede">A reflex game with exactly one button per teammate. Each button is an animal that acts like one of us, and each one gets in your way.</p>
+      <dl class="meta">
+        <div><dt>my role</dt><dd>Game logic + the dog</dd></div>
+        <div><dt>my commits</dt><dd>31 of 63</dd></div>
+        <div><dt>tools</dt><dd>JavaScript, HTML/CSS, Git</dd></div>
+        <div><dt>team</dt><dd>Leo Nguyen, Elijah Mickelson</dd></div>
+      </dl>
+    </header>
+
+    <section aria-labelledby="hero-fig" style="padding-top:28px">
+      <figure class="win">
+        <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title" id="hero-fig">index.html · mid-round, right after the dog sneezed</span></div>
+        <div class="win-body" style="background:#ffe45b"><img src="assets/a1/game-dog-fur.png" alt="Game screen: the top bar says Click: Dog, 52 seconds left. The dog sits in the middle slot; the other two slots are hidden under grey fur piles." width="1200" height="440"></div>
+        <figcaption>The target is the dog, so it's easy. But it just sneezed, and whatever was in the other two slots is now under fur. Clicking a pile uncovers it.</figcaption>
+      </figure>
+    </section>
+
+    <!-- BRIEF -->
+    <section aria-labelledby="brief">
+      <div class="section-head">
+        <span class="cmd">cat brief.md</span>
+        <h2 id="brief">The brief</h2>
+      </div>
+      <p data-draft>Make a game where each team member is represented by exactly one button. We chose animals that match our personalities and gave each one a behaviour that messes with the player.</p>
+      <div class="grid-3 mt">
+        <article class="animal">
+          <div class="animal-img"><img src="assets/a1/penguin_idle.png" alt="Grey low-poly penguin" loading="lazy" width="320" height="480"></div>
+          <div class="animal-body">
+            <h3>Penguin <small>Elijah</small></h3>
+            <p>Falls asleep if you leave him alone, and the whole board goes dark until you wake him.</p>
+          </div>
+        </article>
+        <article class="animal">
+          <div class="animal-img"><img src="assets/a1/raccoon_idle.png" alt="Grey low-poly raccoon" loading="lazy" width="320" height="480"></div>
+          <div class="animal-body">
+            <h3>Raccoon <small>Leo</small></h3>
+            <p>When it's his turn to be clicked, he flashes a warning and swaps places with another animal.</p>
+          </div>
+        </article>
+        <article class="animal me">
+          <div class="animal-img"><img src="assets/a1/dog_idle.png" alt="Grey low-poly fluffy dog" loading="lazy" width="320" height="480"></div>
+          <div class="animal-body">
+            <h3>Dog <small>me</small></h3>
+            <p>Friendly, gets along with everyone, and sneezes fur all over them, so you have to dig the other animals out.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PIVOT -->
+    <section aria-labelledby="pivot">
+      <div class="section-head">
+        <span class="cmd">git diff idea.md</span>
+        <h2 id="pivot">The pivot</h2>
+      </div>
+      <div class="diff">
+        <div class="diff-head">idea.md</div>
+        <div class="diff-line del">Whack-a-Mole: animals pop out of a grid of holes, several copies of each at once</div>
+        <div class="diff-line add">Simon Says: exactly one of each animal in three slots; click the one you're told</div>
+      </div>
+      <p class="mt" data-draft>Our first idea needed several copies of each animal, which broke the "exactly one button per member" rule (Dr. Frisson confirmed it). The animals' behaviours didn't depend on the grid, so we kept them and swapped the board. Instead of drawing new sketches we talked each change through in Discord, which left more time for building.</p>
+    </section>
+
+    <!-- WHAT I BUILT -->
+    <section aria-labelledby="built">
+      <div class="section-head">
+        <span class="cmd">git log --author="Rico"</span>
+        <h2 id="built">What I built</h2>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="label">My commits</span><span class="value">31 <small>/ 63</small></span></div>
+        <div class="stat"><span class="label">Days of building</span><span class="value">3</span></div>
+        <div class="stat"><span class="label">My branch</span><span class="value" style="font-size:20px;line-height:1.7">rico-dev</span></div>
+      </div>
+
+      <div class="bars" role="group" aria-labelledby="bars-title">
+        <p class="bars-title" id="bars-title">Commits to the team repo, by teammate</p>
+        <div class="bar-row me" title="Sep 26: 2 · Sep 27: 10 · Sep 28: 19">
+          <span class="bar-name">Rico (me)</span>
+          <span class="bar-track"><span class="bar" style="width:calc((100% - 6ch) * 1)"></span><span class="bar-val">31</span></span>
+        </div>
+        <div class="bar-row" title="Sep 21: 1 · Sep 23: 7 · Sep 24: 4 · Sep 25: 2 · Sep 27: 5 · Sep 28: 4">
+          <span class="bar-name">Leo</span>
+          <span class="bar-track"><span class="bar" style="width:calc((100% - 6ch) * 0.742)"></span><span class="bar-val">23</span></span>
+        </div>
+        <div class="bar-row" title="Sep 23: 4 · Sep 24: 2 · Sep 27: 3">
+          <span class="bar-name">Elijah</span>
+          <span class="bar-track"><span class="bar" style="width:calc((100% - 6ch) * 0.29)"></span><span class="bar-val">9</span></span>
+        </div>
+        <p class="bars-note">Hover a bar for commits per day. Merges are included. Commits don't measure effort well: Leo's 3D models and sprites took far more work than their commit count shows.</p>
+      </div>
+
+      <ul class="calls mt">
+        <li>
+          <span class="title">Game loop</span>
+          <span class="result">Score, the "Click: Dog" target with its icon, a 60-second timer, click handling, and everything freezing on game over with a final-score pop-up.</span>
+        </li>
+        <li>
+          <span class="title">Feedback on every click</span>
+          <span class="result">Correct and incorrect animations (GIF sprite swaps), a "−5s" that floats up while the timer flashes red, and sound effects.</span>
+        </li>
+        <li>
+          <span class="title">The dog's sneeze (my animal)</span>
+          <span class="result">A wiggle warns you, the dog sneezes, and fur piles drop on every other animal. Clicking a pile uncovers it with no penalty, only a wasted click. Fur stays between rounds, and the raccoon can swap silently underneath it.</span>
+        </li>
+        <li>
+          <span class="title">Penguin and raccoon polish</span>
+          <span class="result">The penguin's wake-up animation (he snaps awake if you catch him early), the board darkening while he sleeps, and a raccoon swap where both animals sink and rise instead of teleporting.</span>
+        </li>
+        <li>
+          <span class="title">Switches for the demo video</span>
+          <span class="result"><code>?nodog</code> and <code>?nosleep</code> URL flags, so we could record each mechanic on its own.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- DOG FRAME BY FRAME -->
+    <section aria-labelledby="dog">
+      <div class="section-head">
+        <span class="cmd">ls sprites/dog/</span>
+        <h2 id="dog">The dog, frame by frame</h2>
+      </div>
+      <p>Leo modelled and rendered the animals. I wired each animation to the game: when it plays, how long it lasts, and what it covers up.</p>
+      <div class="grid-4 mt">
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">dog_action.gif</span></div>
+          <div class="win-body stage"><img src="assets/a1/dog_action.gif" alt="The dog wiggles and sneezes" loading="lazy" width="320" height="480"></div>
+          <figcaption><b>1 · Warning.</b> The wiggle is your cue that fur is coming.</figcaption>
+        </figure>
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">dog_fur_pile.gif</span></div>
+          <div class="win-body stage"><img src="assets/a1/dog_fur_pile.gif" alt="A grey fur pile drops into place" loading="lazy" width="320" height="480"></div>
+          <figcaption><b>2 · Fur lands</b> on every other occupied slot.</figcaption>
+        </figure>
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">dog_correct.gif</span></div>
+          <div class="win-body stage"><img src="assets/a1/dog_correct.gif" alt="The dog reacts happily to a correct click" loading="lazy" width="320" height="480"></div>
+          <figcaption><b>Correct click.</b> Sound, +1 score, new round.</figcaption>
+        </figure>
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">dog_incorrect.gif</span></div>
+          <div class="win-body stage"><img src="assets/a1/dog_incorrect.gif" alt="The dog reacts to a wrong click" loading="lazy" width="320" height="480"></div>
+          <figcaption><b>Wrong click.</b> Buzzer and −5 seconds.</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid-2 mt">
+        <figure class="win">
+          <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">penguin asleep · board goes dark</span></div>
+          <div class="win-body" style="background:#ffe45b"><img src="assets/a1/game-penguin-dark.png" alt="The game board darkened to purple silhouettes because the penguin fell asleep; the target text is hidden." loading="lazy" width="1200" height="440"></div>
+          <figcaption>Leave the penguin alone and the lights go out. The target hides too, so you have to click the penguin to wake him first.</figcaption>
+        </figure>
+        <figure class="win">
+          <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">dog.js · applyFur()</span></div>
+<pre class="code"><span class="c">// show the fur pile and hide the animal;</span>
+<span class="c">// the animal keeps doing its thing underneath.</span>
+<span class="c">// clicking it just uncovers the animal</span>
+<span class="c">// (no penalty, only wastes a click)</span>
+<span class="f">applyFur</span>(hole) {
+  <span class="k">if</span> (hole.mole == <span class="k">null</span> || hole.isFurred) <span class="k">return</span>;
+  <span class="k">var</span> fur = hole.slotElement.querySelector(<span class="s">".fur-pile"</span>);
+  hole.isFurred = <span class="k">true</span>;
+  fur.src = <span class="s">"Sprites/Dog/dog_fur_pile.gif"</span>;
+  fur.hidden = <span class="k">false</span>;
+  hole.visualElement.style.visibility = <span class="s">"hidden"</span>;
+  <span class="c">// ...a click on the slot removes the fur</span>
+}</pre>
+          <figcaption>Hiding the animal instead of pausing it means the raccoon can still swap under the fur. That one decision made the dog and raccoon combine into a nastier trick.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section aria-labelledby="reflect">
+      <div class="section-head">
+        <span class="cmd">cat reflection.md</span>
+        <h2 id="reflect">What I learned</h2>
+      </div>
+      <div class="reflect">
+        <div data-draft>
+          <h3>Constraints are design input</h3>
+          <p>The one-button rule killed our first idea. The animals survived the pivot because we had designed behaviours, not a board.</p>
+        </div>
+        <div data-draft>
+          <h3>Friction can be fun if it's fair</h3>
+          <p>Fur costs you a click, never points. A lot of my last-day commits were tuning that line between a fun obstacle and an unfair penalty: sneeze timing, free uncovering, fur that stays put.</p>
+        </div>
+        <div data-draft>
+          <h3>What I'd change</h3>
+          <p>One consistent colour palette (our bright yellow fought the grey animals) and a visual timer bar instead of a number you have to read mid-panic.</p>
+        </div>
+      </div>
+      <p class="credits-line mt">Team credit: Leo Nguyen made the 3D animal models, sprites, and responsive layout. Elijah Mickelson built the hole and animal class structure and movement. Sounds from Pixabay.</p>
+    </section>
+
+    <nav class="pager" aria-label="Next and previous">
+      <a href="index.html"><span class="dir">← back</span>~/home</a>
+      <a href="a2.html"><span class="dir">next →</span>a2/ Expert on Speed-Dial</a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <span class="status"><span class="sym" aria-hidden="true">●</span> Rico Manalastas · CPSC 581 · University of Calgary</span>
+    <span>last updated 2026-10-27</span>
+  </footer>
+</body>
+</html>

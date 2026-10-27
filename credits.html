@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credits · Rico Manalastas</title>
+  <meta name="description" content="Who made what in Rico's CPSC 581 group projects, and the outside resources used.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/term.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="whoami" href="index.html"><span class="sym" aria-hidden="true">✻</span>rico@cpsc581<span class="path">:~$</span></a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">~/home</a></li>
+          <li><a href="a1.html">a1/</a></li>
+          <li><a href="a2.html">a2/</a></li>
+          <li><a href="philosophy.html">philosophy.md</a></li>
+          <li><a href="credits.html" aria-current="page">credits.md</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <p class="kicker">cat credits.md</p>
+      <h1>Credits</h1>
+      <p class="lede">Group projects are group work. Here's who made what, so my part is clear and theirs is too.</p>
+    </header>
+
+    <section aria-labelledby="team">
+      <div class="section-head">
+        <span class="cmd">git shortlog -sn</span>
+        <h2 id="team">Teammates</h2>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <h3>Leo Nguyen</h3>
+          <ul>
+            <li>A1: 3D animal models, sprites and animations, responsive game layout, reward screen</li>
+            <li>A2: networking between the expert's and novice's programs, the expert-phone and convergence sketches, the maximized-screenshare layout idea</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Elijah Mickelson</h3>
+          <ul>
+            <li>A1: hole and animal class structure, movement and animation system</li>
+            <li>A2: Blender button highlighter, speech-to-highlight pipeline, demo scene, the ten diverging sketches, final screens adapted for the cloth demo, demo video</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="mine">
+      <div class="section-head">
+        <span class="cmd">git shortlog -sn --author="Rico"</span>
+        <h2 id="mine">Me</h2>
+      </div>
+      <div class="panel" style="max-width:900px">
+        <ul>
+          <li>A1: game loop, click feedback, penalties, sounds, the dog's fur mechanic, penguin and raccoon polish (<a href="a1.html#built">details</a>)</li>
+          <li>A2: the five original expert-phone screens in Figma, assembling the write-up, cropping and captioning the sketches (<a href="a2.html#screens">details</a>)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="sources">
+      <div class="section-head">
+        <span class="cmd">cat sources.txt</span>
+        <h2 id="sources">Sources</h2>
+      </div>
+      <div class="panel" style="max-width:900px">
+        <ul>
+          <li>A1 sound effects: <a href="https://pixabay.com/">Pixabay</a></li>
+          <li>A2 speech recognition: <a href="https://alphacephei.com/vosk/">Vosk</a> (vosk-model-small-en-us-0.15)</li>
+          <li>A2 demo software: <a href="https://www.blender.org/">Blender</a></li>
+          <li>This site's font: <a href="https://fonts.google.com/specimen/JetBrains+Mono">JetBrains Mono</a> via Google Fonts</li>
+        </ul>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Next and previous">
+      <a href="philosophy.html"><span class="dir">← previous</span>philosophy.md</a>
+      <a href="index.html"><span class="dir">back to start →</span>~/home</a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <span class="status"><span class="sym" aria-hidden="true">●</span> Rico Manalastas · CPSC 581 · University of Calgary</span>
+    <span>last updated 2026-10-27</span>
+  </footer>
+</body>
+</html>

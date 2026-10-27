@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rico Manalastas · Portfolio</title>
+  <meta name="description" content="Rico Manalastas's interaction design portfolio for CPSC 581: sketches, prototypes, and what I built in each group project.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/term.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="whoami" href="index.html"><span class="sym" aria-hidden="true">✻</span>rico@cpsc581<span class="path">:~$</span></a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">~/home</a></li>
+          <li><a href="a1.html">a1/</a></li>
+          <li><a href="a2.html">a2/</a></li>
+          <li><a href="philosophy.html">philosophy.md</a></li>
+          <li><a href="credits.html">credits.md</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div>
+          <div class="welcome">
+            <p class="welcome-title" id="hero-title"><span class="sym" aria-hidden="true">✻</span>Welcome to Rico's design portfolio!</p>
+            <p class="hint"><a href="a1.html">/a1</a> the dog who sneezes fur · <a href="a2.html">/a2</a> the expert on speed-dial · <a href="philosophy.html">/philosophy</a> why I design this way</p>
+            <p>cwd: ~/cpsc581/portfolio</p>
+          </div>
+
+          <div class="banner-wrap">
+            <div class="banner" data-glitch role="img" aria-label="RICO">
+<pre class="g-base" aria-hidden="true" style="margin:0;font:inherit">██████<span class="sh">╗</span> ██<span class="sh">╗</span> ██████<span class="sh">╗</span> ██████<span class="sh">╗</span>
+██<span class="sh">╔══</span>██<span class="sh">╗</span>██<span class="sh">║</span>██<span class="sh">╔════╝</span>██<span class="sh">╔═══</span>██<span class="sh">╗</span>
+██████<span class="sh">╔╝</span>██<span class="sh">║</span>██<span class="sh">║</span>     ██<span class="sh">║</span>   ██<span class="sh">║</span>
+██<span class="sh">╔══</span>██<span class="sh">╗</span>██<span class="sh">║</span>██<span class="sh">║</span>     ██<span class="sh">║</span>   ██<span class="sh">║</span>
+██<span class="sh">║</span>  ██<span class="sh">║</span>██<span class="sh">║╚</span>██████<span class="sh">╗╚</span>██████<span class="sh">╔╝</span>
+<span class="sh">╚═╝</span>  <span class="sh">╚═╝╚═╝</span> <span class="sh">╚═════╝</span> <span class="sh">╚═════╝</span></pre>
+            </div>
+            <p class="banner-sub">manalastas · cpsc 581 · fall 2026</p>
+          </div>
+        </div>
+
+        <div class="mascot">
+          <button class="mascot-btn" type="button" data-sneeze aria-label="Make the dog sneeze">
+            <svg class="pixel-dog" viewBox="0 0 20 13" shape-rendering="crispEdges" aria-hidden="true"><g class="pd-tail"><rect x="1" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/></g><g class="pd-body"><rect x="12" y="1" width="4" height="1"/><rect x="11" y="2" width="6" height="1"/><rect x="12" y="3" width="2" height="1"/><rect x="15" y="3" width="5" height="1"/><rect x="12" y="4" width="7" height="1"/><rect x="12" y="5" width="7" height="1"/><rect x="12" y="6" width="4" height="1"/><rect x="4" y="7" width="12" height="1"/><rect x="3" y="8" width="13" height="1"/><rect x="3" y="9" width="13" height="1"/><rect x="3" y="10" width="13" height="1"/><rect x="3" y="11" width="2" height="1"/><rect x="6" y="11" width="2" height="1"/><rect x="11" y="11" width="2" height="1"/><rect x="14" y="11" width="2" height="1"/><rect x="3" y="12" width="2" height="1"/><rect x="6" y="12" width="2" height="1"/><rect x="11" y="12" width="2" height="1"/><rect x="14" y="12" width="2" height="1"/></g><g class="pd-ear"><rect x="10" y="3" width="2" height="1"/><rect x="10" y="4" width="2" height="1"/><rect x="19" y="4" width="1" height="1"/><rect x="10" y="5" width="2" height="1"/><rect x="11" y="6" width="1" height="1"/></g><g class="pd-eye"><rect x="14" y="3" width="1" height="1"/></g></svg>
+          </button>
+          <p class="mascot-caption" data-sneeze-caption>click me</p>
+        </div>
+      </div>
+
+      <p class="spinner-line" data-spinner tabindex="0" role="button" aria-label="Status animation, press to pause or resume"
+         data-verbs="Sketching|Diverging|Converging|Prototyping|Iterating|Sneezing fur|Buzzing the expert|Critiquing|Shipping">
+        <span class="spin-glyph" aria-hidden="true">✻</span>
+        <span class="spin-verb" aria-live="off">Sketching…</span>
+        <span class="dim">(<span class="spin-time">0s</span> · <span class="spin-hint">esc to interrupt</span>)</span>
+      </p>
+    </section>
+
+    <!-- WHOAMI -->
+    <section aria-labelledby="whoami">
+      <div class="section-head">
+        <span class="cmd">whoami</span>
+        <h2 id="whoami">Hi, I'm Rico.</h2>
+      </div>
+      <p class="lede" data-draft>I'm a computer science student at the University of Calgary. This site collects what I designed and built in each CPSC 581 group project: the sketches, screens, code, and what I learned along the way.</p>
+      <p data-draft>On a team I'm usually the one who fills the gaps: I pick up whatever is still missing and turn the group's ideas into something you can actually click. Each project page says exactly which parts were mine.</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section aria-labelledby="projects">
+      <div class="section-head">
+        <span class="cmd">ls projects/</span>
+        <h2 id="projects">Projects</h2>
+      </div>
+      <div class="cards">
+        <a class="card" href="a1.html">
+          <div class="card-media contain game"><img src="assets/a1/game-dog-fur.png" alt="The A1 game mid-round: the dog in the middle has sneezed and two grey fur piles cover the other animals." loading="lazy" width="1200" height="440"></div>
+          <div class="card-body">
+            <span class="card-path">a1/</span>
+            <h3>Family of Buttons</h3>
+            <p>Group Project 1 · Sep 2026. A reflex game with one button per teammate, where each button is an animal. I'm the dog that sneezes fur over everyone else.</p>
+            <ul class="tags"><li>game logic</li><li>interaction feedback</li><li>JavaScript</li></ul>
+          </div>
+        </a>
+        <a class="card" href="a2.html">
+          <div class="card-media"><img src="assets/a2/concept-trio.png" alt="Three of my expert-phone screens: an incoming help request, a call where Smart UV Project is lit up on the novice's screen, and the buzz confirming the novice clicked it." loading="lazy" width="1200" height="675"></div>
+          <div class="card-body">
+            <span class="card-path">a2/</span>
+            <h3>Expert on Speed-Dial</h3>
+            <p>Group Project 2 · Oct 2026. A stuck Blender novice calls an expert, and the buttons the expert names light up on the novice's screen. I designed the expert's phone.</p>
+            <ul class="tags"><li>Figma</li><li>mobile UI</li><li>write-up</li></ul>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROCESS LOG -->
+    <section aria-labelledby="log">
+      <div class="section-head">
+        <span class="cmd">git log --oneline --reverse</span>
+        <h2 id="log">Process log</h2>
+      </div>
+      <ol class="log">
+        <li>
+          <time datetime="2026-09-21">2026-09-21</time><span class="proj">a1</span>
+          <p>First team meeting. We brainstormed one animal per teammate and a Whack-a-Mole board.</p>
+        </li>
+        <li>
+          <time datetime="2026-09-26">2026-09-26</time><span class="proj">a1</span>
+          <p>Started my branch <code>rico-dev</code>: score, target, and timer display.</p>
+        </li>
+        <li>
+          <time datetime="2026-09-27">2026-09-27</time><span class="proj">a1</span>
+          <p>Click and timer logic, correct/incorrect animations, and the first version of the dog's fur sneeze. 10 commits.</p>
+        </li>
+        <li>
+          <time datetime="2026-09-28">2026-09-28</time><span class="proj">a1</span>
+          <p>Polish day: penalties, sound, penguin wake-up, raccoon swap, final score. 19 commits.</p>
+        </li>
+        <li>
+          <time datetime="2026-10-21">2026-10-21</time><span class="proj">a2</span>
+          <p>Designed the five expert-phone screens in Figma, then assembled the write-up and captioned our ten sketches.</p>
+        </li>
+        <li class="now">
+          <time datetime="2026-10-27">2026-10-27</time><span class="proj">portfolio</span>
+          <p>Started this site. It covers A1 and A2 so far.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- TODO -->
+    <section aria-labelledby="todo">
+      <div class="section-head">
+        <span class="cmd">cat todo.md</span>
+        <h2 id="todo">What's next</h2>
+      </div>
+      <ul class="todo">
+        <li class="done"><span class="box" aria-hidden="true">☒</span>A1: my part, with evidence</li>
+        <li class="done"><span class="box" aria-hidden="true">☒</span>A2: my part, with evidence</li>
+        <li class="next"><span class="box" aria-hidden="true">☐</span>Design philosophy: first draft is up, still growing</li>
+        <li><span class="box" aria-hidden="true">☐</span>Next project, added as I go</li>
+        <li><span class="box" aria-hidden="true">☐</span>Final portfolio, Dec 4</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="status"><span class="sym" aria-hidden="true">●</span> Rico Manalastas · CPSC 581 · University of Calgary</span>
+    <span>last updated 2026-10-27</span>
+  </footer>
+</body>
+</html>

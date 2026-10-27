@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Philosophy · Rico Manalastas</title>
+  <meta name="description" content="How Rico designs: five principles drawn from the CPSC 581 group projects, and the processes and tools he kept or dropped.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/term.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="whoami" href="index.html"><span class="sym" aria-hidden="true">✻</span>rico@cpsc581<span class="path">:~$</span></a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">~/home</a></li>
+          <li><a href="a1.html">a1/</a></li>
+          <li><a href="a2.html">a2/</a></li>
+          <li><a href="philosophy.html" aria-current="page">philosophy.md</a></li>
+          <li><a href="credits.html">credits.md</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <p class="kicker">cat philosophy.md · working draft, growing until Dec 4</p>
+      <h1>How I design</h1>
+      <p class="lede" data-draft>I like designs that meet people where they already are, answer every action, and make mistakes cheap. Each principle below links to the project where I learned it.</p>
+    </header>
+
+    <section aria-labelledby="principles">
+      <div class="section-head">
+        <span class="cmd">grep -n "rule" philosophy.md</span>
+        <h2 id="principles">Five principles</h2>
+      </div>
+      <ol class="principles" data-draft>
+        <li>
+          <h3>Use what people already do</h3>
+          <p>The best input is one nobody has to learn. Experts already talk novices through steps, so voice became our input. Everyone already knows Simon Says, so our game needed no tutorial.</p>
+          <p class="evidence">evidence → <a href="a2.html#diverge">a2: why voice won</a> · <a href="a1.html#pivot">a1: the pivot</a></p>
+        </li>
+        <li>
+          <h3>Every action gets an answer</h3>
+          <p>If someone does something, the system should react right away. In A1 every click gets a sound, an animation, and a timer change. In A2 the novice's click makes the expert's phone buzz.</p>
+          <p class="evidence">evidence → <a href="a1.html#built">a1: feedback on every click</a> · <a href="a2.html#screens">a2: the buzz screen</a></p>
+        </li>
+        <li>
+          <h3>Friction should be playful, never punishing</h3>
+          <p>Challenge is fine; unfairness isn't. The dog's fur costs you a click, never points, and you always see the sneeze coming.</p>
+          <p class="evidence">evidence → <a href="a1.html#dog">a1: the dog, frame by frame</a></p>
+        </li>
+        <li>
+          <h3>One colour, one meaning</h3>
+          <p>When two people look at two different screens, shared signals keep them in sync. Green means "this button" on the novice's monitor and on the expert's phone.</p>
+          <p class="evidence">evidence → <a href="a2.html#decisions">a2: why the screens look like this</a></p>
+        </li>
+        <li>
+          <h3>Build one real thing; fake the rest honestly</h3>
+          <p>In a short project, build the core interaction for real and prototype everything around it. Then say clearly which is which. In A2 the highlighter runs in Blender, while the phone is a Figma prototype, and our write-up lists exactly what's simulated.</p>
+          <p class="evidence">evidence → <a href="a2.html#evolve">a2: how my screens changed</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="process">
+      <div class="section-head">
+        <span class="cmd">cat process.md</span>
+        <h2 id="process">Process and tools: kept and dropped</h2>
+      </div>
+      <div class="two-col" data-draft>
+        <div class="panel">
+          <h3><span class="ok">✓</span> kept</h3>
+          <ul>
+            <li><b>Diverge, then converge.</b> Ten rough ideas before picking one (A2) kept us from marrying our first idea.</li>
+            <li><b>A branch per person.</b> Working on <code>rico-dev</code> let me try risky mechanics without breaking the team's build (A1).</li>
+            <li><b>Figma for screens.</b> Fast enough to make five screens in an afternoon and easy for teammates to adapt (A2).</li>
+            <li><b>Debug switches for demos.</b> URL flags like <code>?nosleep</code> made it possible to record one mechanic at a time (A1).</li>
+          </ul>
+        </div>
+        <div class="panel reject">
+          <h3><span class="dim">✗</span> dropped or changed</h3>
+          <ul>
+            <li><b>Skipping sketches after a pivot.</b> In A1 we talked the new design through in chat instead of sketching it. That was fast, but it left gaps in our documentation, so in A2 we sketched alternatives at every stage.</li>
+            <li><b>Designing before the demo is locked.</b> My A2 screens had to be relabelled when the task changed. Next time I'll confirm what the code can actually do before polishing screens.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Next and previous">
+      <a href="a2.html"><span class="dir">← previous</span>a2/ Expert on Speed-Dial</a>
+      <a href="credits.html"><span class="dir">next →</span>credits.md</a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <span class="status"><span class="sym" aria-hidden="true">●</span> Rico Manalastas · CPSC 581 · University of Calgary</span>
+    <span>last updated 2026-10-27</span>
+  </footer>
+</body>
+</html>

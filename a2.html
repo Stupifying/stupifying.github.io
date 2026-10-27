@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expert on Speed-Dial · Rico Manalastas</title>
+  <meta name="description" content="Group Project 2: a Blender novice calls an expert, whose spoken button names light up on the novice's screen. Rico designed the expert's phone screens in Figma and assembled the write-up.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/term.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="whoami" href="index.html"><span class="sym" aria-hidden="true">✻</span>rico@cpsc581<span class="path">:~/a2$</span></a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">~/home</a></li>
+          <li><a href="a1.html">a1/</a></li>
+          <li><a href="a2.html" aria-current="page">a2/</a></li>
+          <li><a href="philosophy.html">philosophy.md</a></li>
+          <li><a href="credits.html">credits.md</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <p class="kicker">Group Project 2 · Oct 2026 · team of 3</p>
+      <h1>Expert on Speed-Dial</h1>
+      <p class="lede">Remote help for Blender. A stuck novice calls an expert's phone. The expert talks, and the buttons they name light up green in the novice's Blender. When the novice clicks the right one, the expert's phone buzzes.</p>
+      <dl class="meta">
+        <div><dt>my role</dt><dd>Expert's phone UI + write-up</dd></div>
+        <div><dt>I made</dt><dd>5 Figma screens</dd></div>
+        <div><dt>tools</dt><dd>Figma</dd></div>
+        <div><dt>team</dt><dd>Elijah Mickelson, Leo Nguyen</dd></div>
+      </dl>
+    </header>
+
+    <section aria-labelledby="hero-fig" style="padding-top:28px">
+      <figure class="win">
+        <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title" id="hero-fig">figma · expert phone · my concept screens</span></div>
+        <div class="win-body"><img src="assets/a2/concept-trio.png" alt="Three of my phone screens: an incoming help request from Jordan, a call where Smart UV Project is lit up on Jordan's screen, and a buzz confirming Jordan clicked it." width="1200" height="675"></div>
+        <figcaption>Three of the five screens I designed: the call comes in, a button lights up, and the novice clicks it.</figcaption>
+      </figure>
+    </section>
+
+    <!-- BRIEF -->
+    <section aria-labelledby="brief">
+      <div class="section-head">
+        <span class="cmd">cat brief.md</span>
+        <h2 id="brief">The brief</h2>
+      </div>
+      <p>Help an expert in 3D software share what they know with a novice, remotely and in real time, using the body (sensing, voice, touch, haptics) rather than relying on a plain video call.</p>
+      <p data-draft>Our answer: the expert doesn't describe where to click. They just say the button's name, and it lights up in the novice's own Blender.</p>
+      <ol class="flow mt" aria-label="How a call works">
+        <li><span class="who">novice</span><br>Clicks the expert's name in a Blender side panel.</li>
+        <li><span class="who">expert</span><br>Their phone rings with a help request. They accept.</li>
+        <li><span class="who">expert</span><br>Talks: "okay, now add <b>Collision</b>…"</li>
+        <li class="out"><span class="who">novice</span><br>The <b>Collision</b> button glows green in their Blender.</li>
+        <li><span class="who">novice</span><br>Clicks the glowing button.</li>
+        <li class="out"><span class="who">expert</span><br>Phone buzzes ✓, so they know it landed and can move on.</li>
+      </ol>
+    </section>
+
+    <!-- DIVERGE -->
+    <section aria-labelledby="diverge">
+      <div class="section-head">
+        <span class="cmd">ls sketches/</span>
+        <h2 id="diverge">Ten ideas, then one</h2>
+      </div>
+      <div class="grid-2">
+        <figure class="win">
+          <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">diverging-sketches.png</span></div>
+          <div class="win-body light"><img src="assets/a2/diverging-sketches.png" alt="Ten small pencil sketches on lined paper, each showing a different way an expert could guide a novice in Blender." loading="lazy" width="780" height="1087"></div>
+          <figcaption>Elijah drew these ten. I cropped them out of his scanned page and wrote a caption for each one for our write-up.</figcaption>
+        </figure>
+        <div>
+          <ol class="sketch-list" aria-label="The ten sketch ideas">
+            <li><span class="n">01</span>Voice caption: the expert's words appear by the button</li>
+            <li><span class="n">02</span>Physical pointing: point at a button, it highlights for the novice</li>
+            <li class="pick"><span class="n">03</span>Voice match: the spoken button name lights up <span class="pick-tag">← our direction</span></li>
+            <li><span class="n">04</span>Shortcut suggestion: "expand this" → press S, type 1.25</li>
+            <li><span class="n">05</span>Phone tap: tap a button on your phone, the novice gets a hint</li>
+            <li><span class="n">06</span>Simulated location: move a copy to show where it goes</li>
+            <li><span class="n">07</span>Call and buzz: the novice asks for help, the phone buzzes</li>
+            <li><span class="n">08</span>Voice command: "select it and delete it" just runs</li>
+            <li><span class="n">09</span>Camera drag: rotate the novice's view from your phone</li>
+            <li><span class="n">10</span>Shake to undo: shake the phone, the mistake is undone</li>
+          </ol>
+          <div class="note mt" data-draft>
+            <p><b>Why voice won:</b> experts already talk novices through steps, so there's no new gesture to learn. The help shows up on the real button instead of on a screen the novice has to interpret. Ideas 07 and 09 survived as the call/buzz and the 3D view.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY SCREENS -->
+    <section aria-labelledby="screens">
+      <div class="section-head">
+        <span class="cmd">open figma/expert-phone</span>
+        <h2 id="screens">What I designed: the expert's phone</h2>
+      </div>
+      <p>I designed the five core screens of a call in Figma. That afternoon the team switched the demo task, and Elijah adapted my screens to it. Toggle to compare.</p>
+
+      <div data-toggle-group>
+        <div class="toggle" role="group" aria-label="Which version of the screens to show">
+          <button type="button" data-show="row-concept" aria-pressed="true">my concept (5)</button>
+          <button type="button" data-show="row-final" aria-pressed="false">final, adapted (6)</button>
+        </div>
+
+        <div id="row-concept">
+          <div class="phones" tabindex="0" aria-label="My five concept screens, scrollable">
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/figma-concept/1-incoming-call.svg" alt="Incoming call screen: Help request from Blender, Jordan, working on frisson_cube.blend in Edit Mode, with Decline and Accept buttons." loading="lazy" width="390" height="844"></div>
+              <figcaption><b><span class="n">1</span>Incoming call</b>Shows who's stuck and which file they're in, so the expert has context before picking up.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/figma-concept/2-in-call-listening.svg" alt="In-call screen: Nothing lit up yet, say a button's name; transcript reads okay, open the UV menu and…" loading="lazy" width="390" height="844"></div>
+              <figcaption><b><span class="n">2</span>Listening</b>Nothing is lit yet. The prompt says what to do, and the live transcript shows the phone is hearing you.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/figma-concept/3-in-call-button-lit-up.svg" alt="In-call screen with a green-bordered card: Lit up on Jordan's screen, Smart UV Project, 3D Viewport › UV menu." loading="lazy" width="390" height="844"></div>
+              <figcaption><b><span class="n">3</span>Button lit up</b>The card turns green and names the button glowing on Jordan's screen, plus where it lives.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/figma-concept/4-buzz-novice-clicked.svg" alt="Full-screen green check with vibration marks: Jordan clicked Smart UV Project, 4.1 s after you said it." loading="lazy" width="390" height="844"></div>
+              <figcaption><b><span class="n">4</span>Buzz</b>The novice clicked it. The phone buzzes and shows how long it took after you said it.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/figma-concept/5-call-ended.svg" alt="Call ended summary: Jordan finished the Frisson cube; 3:12 call, 4 of 4 buttons clicked, 5.0 s average, then a list of each button and time." loading="lazy" width="390" height="844"></div>
+              <figcaption><b><span class="n">5</span>Call ended</b>A summary: call length, buttons clicked, average time to click, and every step in order.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div id="row-final" hidden>
+          <p class="toggle-note">Adapted by Elijah for the cloth demo. The structure of each screen carried over from mine; the live screenshare at the top is new.</p>
+          <div class="phones" tabindex="0" aria-label="The six final screens, scrollable">
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/final/incoming-call.png" alt="Final incoming call from Elijah, working on cloth_test.blend." loading="lazy" width="390" height="844"></div>
+              <figcaption><b>Incoming call</b>Same layout, real demo file.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/final/in-call.png" alt="Final in-call screen with a live view of Elijah's Blender above the say-a-button card." loading="lazy" width="390" height="844"></div>
+              <figcaption><b>In call</b>A live view of the novice's Blender above the card.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/final/in-call-button-lit-up.png" alt="Final lit-up card: Add Collision, 3D Viewport › Properties › Physics." loading="lazy" width="390" height="844"></div>
+              <figcaption><b>Button lit up</b>"Add Collision" for the cloth task.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/final/novice-clicked.png" alt="Final buzz screen: Elijah clicked Add Collision, 4.2 s after you said it." loading="lazy" width="390" height="844"></div>
+              <figcaption><b>Novice clicked</b>The buzz screen, unchanged in spirit.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/final/in-call-before-end.png" alt="Final in-call screen near the end of the call." loading="lazy" width="390" height="844"></div>
+              <figcaption><b>Before end</b>Back to listening for the next step.</figcaption>
+            </figure>
+            <figure class="phone">
+              <div class="phone-frame"><img src="assets/a2/final/call-ended.png" alt="Final call summary: Elijah completed their task; 8 of 8 buttons clicked." loading="lazy" width="390" height="844"></div>
+              <figcaption><b>Call ended</b>The summary, now with 8 cloth steps.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DECISIONS -->
+    <section aria-labelledby="decisions">
+      <div class="section-head">
+        <span class="cmd">cat decisions.md</span>
+        <h2 id="decisions">Why the screens look like this</h2>
+      </div>
+      <ul class="calls" data-draft>
+        <li>
+          <span class="title">Green means "this button" on both screens</span>
+          <span class="result">The lit-up card and the buzz use <code>#7DE79E</code>, the exact green our add-on flashes in Blender. Expert and novice share one colour for one meaning.</span>
+        </li>
+        <li>
+          <span class="title">The phone mostly shows; the voice does the work</span>
+          <span class="result">The expert is busy talking, so the only taps are Accept, Mute, and End. Everything else is feedback: the transcript, the lit button, the buzz.</span>
+        </li>
+        <li>
+          <span class="title">Close the loop on every instruction</span>
+          <span class="result">The buzz screen and the summary show time-to-click, so the expert knows an instruction landed without having to ask "did you find it?"</span>
+        </li>
+        <li>
+          <span class="title">Context before you answer</span>
+          <span class="result">The incoming call names the file and mode (<code>frisson_cube.blend · Edit Mode</code>), so the expert doesn't start cold.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- EVOLUTION -->
+    <section aria-labelledby="evolve">
+      <div class="section-head">
+        <span class="cmd">git diff concept final</span>
+        <h2 id="evolve">How my screens changed</h2>
+      </div>
+      <div class="diff">
+        <div class="diff-head">expert-phone.fig</div>
+        <div class="diff-line del">demo task: UV-unwrap a cube (Smart UV Project)</div>
+        <div class="diff-line add">demo task: drape a cloth over a table (Add Collision, Add Cloth Physics)</div>
+        <div class="diff-line del">call screen: transcript and lit-up card only</div>
+        <div class="diff-line add">call screen: live mini-view of the novice's Blender on top</div>
+      </div>
+      <p class="mt" data-draft>Our highlighter couldn't reach Blender's top menus, which UV unwrapping needs, so the team moved the demo to a cloth simulation. Because every screen was built around one concrete task, the switch was mostly relabelling: the layout, the green card, the buzz, and the summary all stayed.</p>
+      <div class="compare mt">
+        <figure class="phone">
+          <div class="phone-frame"><img src="assets/a2/figma-concept/3-in-call-button-lit-up.svg" alt="My version: Smart UV Project lit up on Jordan's screen." loading="lazy" width="390" height="844"></div>
+          <figcaption><b>Mine</b>UV task, transcript only.</figcaption>
+        </figure>
+        <figure class="phone">
+          <div class="phone-frame"><img src="assets/a2/final/in-call-button-lit-up.png" alt="Final version: Add Collision lit up on Elijah's screen, with a live view of Blender above." loading="lazy" width="390" height="844"></div>
+          <figcaption><b>Final</b>Cloth task, live view added.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TEAM CONTEXT -->
+    <section aria-labelledby="team">
+      <div class="section-head">
+        <span class="cmd">ls ../teammates/</span>
+        <h2 id="team">Around my screens</h2>
+      </div>
+      <p>For context, these views came from my teammates. They let the expert look closer when saying a button's name isn't enough.</p>
+      <div class="grid-3 mt">
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">ar-sketch.jpg · Leo</span></div>
+          <div class="win-body light"><img src="assets/a2/leo-ar-sketch.jpg" alt="Leo's pencil sketch of the expert's phone: a 3D cube with buttons for gyroscope, lock camera, align camera, and annotate or erase." loading="lazy" width="1024" height="958"></div>
+          <figcaption>Leo's sketch: steer a 3D view of the scene with the phone's gyroscope and paint highlights on the model.</figcaption>
+        </figure>
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">maximized.png · teammates</span></div>
+          <div class="win-body" style="display:grid;place-items:center;padding:10px;background:#1f1f1f"><img src="assets/a2/final/maximized-screenshare.png" alt="Phone showing the novice's Blender window split into pieces stacked to fit a portrait screen." loading="lazy" width="390" height="844" style="max-height:340px;width:auto"></div>
+          <figcaption>The maximized screenshare splits Blender's window into pieces stacked to fit a portrait phone.</figcaption>
+        </figure>
+        <figure class="win">
+          <div class="win-bar"><span class="win-title">detached.png · teammates</span></div>
+          <div class="win-body" style="display:grid;place-items:center;padding:10px;background:#1f1f1f"><img src="assets/a2/final/detached-view-highlighted.png" alt="Phone showing the 3D scene on its own with part of the cloth painted green." loading="lazy" width="390" height="844" style="max-height:340px;width:auto"></div>
+          <figcaption>The detached view: orbit the scene and paint part of the model green.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- WRITE-UP -->
+    <section aria-labelledby="writeup">
+      <div class="section-head">
+        <span class="cmd">cat writeup.md</span>
+        <h2 id="writeup">Putting the write-up together</h2>
+      </div>
+      <ul class="calls">
+        <li>
+          <span class="title">Assembled the design-process write-up</span>
+          <span class="result">I took on the write-up while my teammates finished the prototype and demo video: the structure, the figures, and how they read in order.</span>
+        </li>
+        <li>
+          <span class="title">Cropped and captioned the ten sketches</span>
+          <span class="result">One line per sketch, so someone outside our team could follow which idea was which and why number 3 won.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- REFLECTION -->
+    <section aria-labelledby="reflect">
+      <div class="section-head">
+        <span class="cmd">cat reflection.md</span>
+        <h2 id="reflect">What I learned</h2>
+      </div>
+      <div class="reflect">
+        <div data-draft>
+          <h3>Design for someone who's busy talking</h3>
+          <p>The expert's main input is their voice, so the phone's job is to show, not to ask for taps.</p>
+        </div>
+        <div data-draft>
+          <h3>Build around one concrete task</h3>
+          <p>Because my screens named a real file and real buttons, the team could swap the whole demo task by relabelling instead of redesigning.</p>
+        </div>
+        <div data-draft>
+          <h3>What I'd change</h3>
+          <p>Test a call with a real expert and novice before polishing. I'd also prototype the buzz on an actual phone: it's the one part of the design you feel instead of see.</p>
+        </div>
+      </div>
+      <p class="credits-line mt">Team credit: Elijah Mickelson built the Blender highlighter and demo scene, drew the ten sketches, and adapted the screens for the cloth demo. Leo Nguyen built the networking between the two sides and drew the phone and convergence sketches. Speech recognition by Vosk.</p>
+    </section>
+
+    <nav class="pager" aria-label="Next and previous">
+      <a href="a1.html"><span class="dir">← previous</span>a1/ Family of Buttons</a>
+      <a href="philosophy.html"><span class="dir">next →</span>philosophy.md</a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <span class="status"><span class="sym" aria-hidden="true">●</span> Rico Manalastas · CPSC 581 · University of Calgary</span>
+    <span>last updated 2026-10-27</span>
+  </footer>
+</body>
+</html>
